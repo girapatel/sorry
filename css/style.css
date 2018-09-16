@@ -115,7 +115,7 @@ footer {position: relative;height: 150px;width: 100%;}
 p.copyright {position: absolute;width: 100%;color: #707070;font-size: 1em;text-align:center;bottom:0;}
 
 /* Queries */
-@media screen and (min-width:1921px){body,html{font-size:22px}.main {display:-ms-grid-columns;display:grid;grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));grid-gap: 1rem;margin-top: 4rem;}.col-2 {display:-ms-grid-columns;display:grid;grid-template-columns: repeat(2,1fr);grid-gap: 1rem;margin-top: 2rem;}.intro-top{13rem}.intro-bottom{6rem}}
+@media screen and (min-width:1921px){body,html{font-size:22px}.main {display:-ms-grid-columns;display:grid;grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));grid-gap: 1rem;margin-top: 4rem;}.col-2 {display:-ms-grid-columns;display:grid;grid-template-columns: repeat(2,1fr);grid-gap: 1rem;margin-top: 2rem;}.intro-top{margin-top:13rem}.intro-bottom{margin-bottom:6rem}}
 @media screen and (max-width:1920px){body,html{font-size:20px}}
 @media screen and (max-width:1440px){body,html{font-size:16px}}
 @media screen and (min-width:1280px){.col-3 {display:-ms-grid-columns;display:grid;grid-template-columns: repeat(3,1fr);grid-gap: 1rem;margin-top: 2rem;}}
