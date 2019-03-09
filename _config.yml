@@ -1,0 +1,20 @@
+title: Gira Patel
+email: gira.patel94@gmail.com
+description: Visual designer with experience in graphic design, product design, and video production. Passionate about digital, branding, and interactive design. Other interests include tech, media, and entertainment.
+url: http://girapatel.co/
+
+baseurl: ""
+url: http://girapatel.co/
+permalink: /:title/
+
+exclude:
+  - README.md
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+    
+# Build settings
+#markdown: kramdown
+#theme: minima
+#plugins:
+ # - jekyll-feed

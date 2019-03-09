@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+<body>
+  <div class="content">
+
+    {% include nav.html %}
+  <div class="container title">
+    <h1 class="align-center">{{ page.title }}</h1>
+  </div>
+    {{content}}
+      
+<a href="/index"><h5 class="spacer">&larr; Back to Work</h5></a>
+    
+    {% include footer.html %}
+
+    </div>
+  </body>
+    <script>{% include vendor/jquery.js %}</script>
+    <script>{% include main.js %}</script>
+    <script>{% include dist/lity.min.js %}</script>
+</html>
