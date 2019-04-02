@@ -16,7 +16,10 @@
 
     </div>
   </body>
-    <script>{% include vendor/jquery.js %}</script>
+     <script>{% include vendor/jquery.js %}</script>
     <script>{% include main.js %}</script>
-    <script>{% include dist/lity.min.js %}</script>
+    <script>{% include dist/simplebox.min.js %}</script>
+    <script>$(function () {
+    $(".slb").simplebox({darkMode: true,});
+});</script>
 </html>
