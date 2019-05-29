@@ -18,3 +18,4 @@ exclude:
 #theme: minima
 #plugins:
  # - jekyll-feed
+   - jekyll-compress-images
