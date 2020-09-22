@@ -1,11 +1,13 @@
-<section class="nav">
+<nav class="nav">
  <!--logo and links-->    
-<div class="nav-left">
-    <a class="nav-logo h1"  {% if page.title == "Home" %}class="active"{% endif %} href="/"><dfn data-info="Not Jira.">Gira.</dfn></a>
-    <a class="nav-link-item"  {% if page.title == "Home" %}class="active"{% endif %} href="/">work</a>
-    <a class="nav-link-item"  {% if page.title == "Info" %}class="active"{% endif %} href="../info">info</a>
+<div class="nav-align">
+    <a class="nav-logo"  {% if page.title == "Home" %}class="active"{% endif %} href="/"><dfn data-info="Not Jira.">Gira.</dfn></a>
+    <a class="nav-link-item margin-left"  {% if page.title == "Home" %}class="active"{% endif %} href="/">Work</a>
+    <a class="nav-link-item margin-left"  {% if page.title == "About" %}class="active"{% endif %} href="../about">About</a>
   </div>
-    
-{% include social.html %}
+<div class="nav-align"><label class="theme-switch" for="checkbox">
+  <input type="checkbox" id="checkbox">
+  <span class="slider round"></span>
+    </label></div>
 
-</section>
+</nav>

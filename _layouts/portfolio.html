@@ -5,21 +5,18 @@
   <div class="content">
 
     {% include nav.html %}
-  <div class="container title">
-    <h1 class="align-center">{{ page.title }}</h1>
+  <div class="container margin-top">
+    <h2 class="align-center">{{ page.title }}</h2>
   </div>
     {{content}}
-      
-<a href="/"><p class="spacer">&larr; Back to Work</p></a>
     
+  <div class="spacer"></div>
+
     {% include footer.html %}
 
     </div>
   </body>
-     <script>{% include vendor/jquery.js %}</script>
-    <script>{% include main.js %}</script>
-    <script>{% include dist/simplebox.min.js %}</script>
-    <script>$(function () {
-    $(".slb").simplebox({darkMode: true,});
-});</script>
+    <script>{% include color-toggle.js %}</script>
+    <script>{% include animation.js %}</script>
+    <script>{% include key-nav.js %}</script>
 </html>
