@@ -285,7 +285,7 @@ hr {border: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-main img, main video {
+main img, main video, section img, section video {
   display: block;
   width: 100%;
 }
@@ -504,7 +504,7 @@ footer {
     <h2 class="align-center">Bitcamp</h2>
   </div>
     <!--INTRO TEXT-->
-<main class="col-2-desc">
+<section class="col-2-desc">
     <div>
         <h3>Overview</h3>
         <p>Bitcamp is a 36-hour hackathon at the University of Maryland, College Park. I was a part of the organizing team, where I designed social graphics, illustrations, motion graphics, and shirts. 2015 Designer / 2016 Design Lead / 2018 Colorwar Judge</p>
@@ -513,28 +513,30 @@ footer {
     <h3>Tools Used</h3>
     <p>Photoshop, Illustrator, After Effects</p>
     </div>
-</main>
+</section>
 
       
 <!--MAIN GRID-->
-<main class="col-1 margin-small">
+<main>
+<div class="col-1 margin-small">
     <div class="item"><video autoplay loop muted playsinline src="../../img/bitcamp-hover.mp4" alt="Spinning compass interaction"></video></div>
     <div class="item"><img src="../../img/bitcamp-colorwar.jpg" alt="Colorwar Logo"></div>
-</main>
-<main class="col-2 margin-small">
+</div>
+<div class="col-2 margin-small">
     <div class="item"><img src="../../img/bitcamp-social1.jpg" alt="New Years party emoji"></div>
     <div class="item"><img src="../../img/bitcamp-social2.jpg" alt="Flame pixel heart"></div>
     <div class="item"><img src="../../img/bitcamp-social3.jpg" alt="Thanksgiving turkey"></div>
     <div class="item"><img src="../../img/bitcamp-social4.jpg" alt="Candy cane with bow"></div>
-</main>
+</div>
 <p class="margin-tight">Hackathons were a big part of my life in college. It was what led me to my love for digital and tech. I made a lot of great memories. Here's proof:</p>
-<main class="col-3 margin-med">
+<div class="col-3 margin-med">
     <div class="item"><img src="../../img/1-bitcamp.jpg" alt="Organizer Photo"></div>
     <div class="item"><img src="../../img/2-bitcamp.jpg" alt="Technica"></div>
     <div class="item"><img src="../../img/3-bitcamp.jpg" alt="Colorwar MC"></div>
     <div class="item"><img src="../../img/4-bitcamp.jpg" alt="MLH Prime Photobooth"></div>
     <div class="item"><img src="../../img/5-bitcamp.jpg" alt="Hacking"></div>
     <div class="item"><img src="../../img/6-bitcamp.jpg" alt="Bitcamp Photobooth"></div>
+</div>
 </main>
 
 <section class="spacer">
