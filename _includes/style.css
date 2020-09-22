@@ -326,7 +326,7 @@ ul,li {
   100% {opacity:  1;}
 }
 
-h1, h2, p span, .card, div.item img, video {
+h1, h2, p span, .card, div.item img, div.item video, video {
   opacity:  0;
 }
 
