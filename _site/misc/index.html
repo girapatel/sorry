@@ -50,9 +50,11 @@ html {
 body {
   height: 100%;
   max-width: 1440px;
+  position: relative;
 }
 html,
 body {
+  overflow-x: hidden;
   margin: 0 auto;
   font-size: 16px;
   font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -186,10 +188,10 @@ p, .p, h3, .h3 {margin-block-start: .75em; margin-block-end: .75em;}
 .slider:before {
   position: absolute;
   content: "";
-  height: 23px;
-  width: 22px;
-  left: 4px;
-  bottom: 4px;
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
   background-color: var(--slider-color);
   -webkit-transition: .4s;
   transition: .4s;
@@ -452,6 +454,7 @@ footer {
   .nav {justify-content: center;}
   .nav-logo {padding-right: .5em;}
   .nav-align {align-items: center;}
+  .theme-switch, .slider {transform: scale(0.9);}
   .margin-left {
     margin: 1.6em;
   }
@@ -551,9 +554,9 @@ const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"
 
 function switchTheme(e) {
   if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'light')
-  } else {
     document.documentElement.setAttribute('data-theme', 'dark')
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light')
   }
 }
 
@@ -561,11 +564,11 @@ toggleSwitch.addEventListener('change', switchTheme, false)
 
 function switchTheme(e) {
   if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem('theme', 'light') //add this
-  } else {
     document.documentElement.setAttribute('data-theme', 'dark')
     localStorage.setItem('theme', 'dark') //add this
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem('theme', 'light') //add this
   }
 }
 
@@ -574,7 +577,7 @@ const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme
 if (currentTheme) {
   document.documentElement.setAttribute('data-theme', currentTheme)
 
-  if (currentTheme === 'light') {
+  if (currentTheme === 'dark') {
     toggleSwitch.checked = true
   }
 }

@@ -174,10 +174,10 @@ p, .p, h3, .h3 {margin-block-start: .75em; margin-block-end: .75em;}
 .slider:before {
   position: absolute;
   content: "";
-  height: 23px;
-  width: 22px;
-  left: 4px;
-  bottom: 4px;
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
   background-color: var(--slider-color);
   -webkit-transition: .4s;
   transition: .4s;
@@ -440,6 +440,7 @@ footer {
   .nav {justify-content: center;}
   .nav-logo {padding-right: .5em;}
   .nav-align {align-items: center;}
+  .theme-switch, .slider {transform: scale(0.9);}
   .margin-left {
     margin: 1.6em;
   }
