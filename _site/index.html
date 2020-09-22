@@ -17,7 +17,7 @@
   src: 
     url('/fonts/ubuntumono-regular-webfont.woff2') format('woff2'),
     url('/fonts/ubuntumono-regular-webfont.woff') format('woff'),
-    url('/fonts/ubuntumono-regular-webfont.ttf') format('truetype'),
+    url('/fonts/ubuntumono-regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -78,7 +78,7 @@ body {
 .left {float: left;}
 .right {float: right;}
 
-a,button,svg path,.nav-logo,.content,h3,html,body,.card img {
+a,button,svg path,.nav-logo,.content,h3,html,body,.card img,.card video {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -340,7 +340,7 @@ ul,li {
   100% {opacity:  1;}
 }
 
-h1, h2, p span, .card, div.item img, video {
+h1, h2, p span, .card, div.item img, div.item video {
   opacity:  0;
 }
 
@@ -403,7 +403,7 @@ footer {
     dfn:hover::before {
         top: 20px;
     }
-    a:hover, a h3:hover, a img:hover + h3 {
+    a:hover, a h3:hover, a img:hover + h3, a video:hover + h3 {
         color: var(--blue);
         text-decoration: none;
         border-bottom:  solid 1px var(--blue);
@@ -417,7 +417,7 @@ footer {
         border: 4px solid var(--blue);
         color: #fff;
     }
-    .card img:hover,h3 ~ .card img {
+    .card img:hover,.card video:hover,h3 ~ .card img,h3 ~ .card video {
         opacity: .7;
     }
 }
@@ -461,7 +461,7 @@ footer {
   .margin-tight {margin: 5em 0;}
   .margin-right {margin: 0 2em;}
   h1,h2,p span,h4,a h3,li {text-align: center;display: block;}
-  a:hover, a h3:hover, a img:hover + h3 {border-bottom: transparent}
+  a:hover, a h3:hover, a img:hover + h3, a video:hover + h3 {border-bottom: transparent}
   .about-parent {flex-direction: column;}
 }
 @media screen and (max-width: 553px) {
@@ -512,10 +512,10 @@ footer {
 <main class="main col-2">
     <div class="card"><a href="late-night"><img src="img/thumbnail_lnsm.jpg" alt=""><h3>Late Night with Seth Meyers</h3></a><h4>Identity, Social</h4></div>
     
-    <div class="card"><a href="snl"><img src="img/thumbnail_snl.gif" alt=""><h3>Saturday Night Live</h3></a><h4>Social, Web</h4>
+    <div class="card"><a href="snl"><video autoplay loop muted playsinline src="img/thumbnail_snl.mp4" alt=""></video><h3>Saturday Night Live</h3></a><h4>Social, Web</h4>
     </div>
     
-    <div class="card"><a href="a-little-late" ><img src="img/thumbnail_allwls.gif" alt=""><h3>A Little Late with Lilly Singh</h3></a><h4>Identity, Social</h4>
+    <div class="card"><a href="a-little-late" ><video autoplay loop muted playsinline src="img/thumbnail_allwls.mp4" alt=""></video><h3>A Little Late with Lilly Singh</h3></a><h4>Identity, Social</h4>
     </div>
     
     <div class="card"><a href="podcasts" ><img src="img/thumbnail_podcasts.jpg" alt=""><h3>Podcasts</h3></a><h4>Identity</h4>
@@ -532,7 +532,7 @@ footer {
     
     <div class="card"><a href="bitcamp" ><img src="img/thumbnail_bitcamp.jpg" alt=""><h3>Bitcamp</h3></a><h4>Hackathon Organizer, Illustration</h4></div>
     
-    <div class="card"><a href="misc" ><video autoplay loop muted playsinline src="img/thumbnail-misc.mp4" alt=""></video><h3>Miscellaneous</h3></a><h4>Personal, Motion, Illustration</h4></div>
+    <div class="card"><a href="misc" ><video autoplay loop muted playsinline src="img/thumbnail_misc.mp4" alt=""></video><h3>Miscellaneous</h3></a><h4>Personal, Motion, Illustration</h4></div>
 </section> 
 
     <!--FOOTER-->  
@@ -585,7 +585,7 @@ if (currentTheme) {
   }
 }
 </script>
-    <script>const animatedTags = document.querySelectorAll("h1, h2, p span, .card, div.item img, video")
+    <script>const animatedTags = document.querySelectorAll("h1, h2, p span, .card, div.item img, div.item video")
 
 //fade out on load
 animatedTags.forEach(tag => {
