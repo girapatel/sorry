@@ -273,9 +273,11 @@ button {
 }
 
 hr {border: 0;
+    width: 5%;
     height: 2px;
     background: var(--bg-color);
-    background-image: linear-gradient(to right, var(--bg-color), var(--gradient-color));
+    background-image: linear-gradient(to right, var(--notjira-color), var(--notjira-color));
+    margin: unset;
 }
 
 .main {
@@ -328,9 +330,9 @@ ul,li {
 }
 
 .gradient-box {
-  background-color: var(--gradient-color);
+  /*background-color: var(--gradient-color);*/
   padding: .5em 1.4em .6em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 @keyframes fadein {
@@ -367,6 +369,11 @@ h1 span, h1, p span, .card, div.item img, div.item video {
   display: flex;
   flex-direction: column;
   flex: 3;
+}
+
+.about div {
+  background-image: linear-gradient(to bottom, var(--gradient-color), var(--bg-color));
+  background-attachment: fixed;
 }
 
 .about-pic {
