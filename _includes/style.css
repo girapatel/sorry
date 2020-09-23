@@ -434,6 +434,7 @@ footer {
     text-align: center;
     align-items: center
     }
+  hr {margin: auto;}
   h2 {font-size: 1em;}
   p span {font-size: 1em;}
   h3 {font-size: .7em;}
