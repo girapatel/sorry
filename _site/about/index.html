@@ -3,13 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gira Patel | I'm a visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics.">
+    <meta name="description" content="Visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics.">
     <meta name="keywords" content="gira patel, gira, brand designer, graphic designer, digital designer, visual designer, digital designer new york, visual designer new york">
     <meta name="theme-color" content="var(--bg-color)"/>
     <title>Gira Patel | Portfolio</title>
     <meta property="og:url" content="http://localhost:4000" />
     <meta property="og:title" content="Gira Patel | Portfolio" />
     <meta property="og:image" content="http://girapatel.co/img/share-thumb.jpg" />
+    <meta property="twitter:image" content="http://girapatel.co/img/share-thumb.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:description" content="Visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics." />
+    <meta property="twitter:creator" content="@GiraNotJira" />
     <link href="../img/favicon.ico" rel="icon" type="image/bmp">
     
     <style>@font-face {
@@ -448,6 +452,7 @@ footer {
     text-align: center;
     align-items: center
     }
+  hr {margin: auto; width: 30%;}
   h2 {font-size: 1em;}
   p span {font-size: 1em;}
   h3 {font-size: .7em;}
@@ -515,9 +520,9 @@ footer {
         <div class="gradient-box"><h2>The basics</h2><hr>
         <p>My name is pronounced GEER-ah, with a hard G. Based in Brooklyn, NY. She/her</p></div>
         <div class="gradient-box"><h2>My personality</h2><hr>
-        <p>I name my layers and hate buzzwords. INFJ if you care about that stuff. Unfortunately, very active on <a href="https://twitter.com/GiraNotJira">the bird app</a>, mostly to talk about birds.</p></div>
-        <div class="gradient-box"><h2>My focus</h2><hr>
-        <p>I’m best with visual, branding, UI, illustration and I enjoy experimenting with motion. I'm always down to try new tools. Currently playing with Cinema 4D.</p></div>
+        <p>I name my layers and hate buzzwords. INFJ if you're into that stuff. Unfortunately, very active on <a href="https://twitter.com/GiraNotJira" onclick="window.open(this.href); return false;">the bird app</a>, mostly to talk about birds.</p></div>
+        <div class="gradient-box"><h2>What I like to do</h2><hr>
+        <p>I mostly do branding and identity work, love experimenting with motion, and dabble in video editing and illustration when I can. I'm always down to try new tools. Currently playing with Cinema 4D.</p></div>
         <div class="gradient-box"><h2>My dream client(s)</h2><hr>
         <p>Anything Issa Rae or Gerard Way touches.</p></div>
         <div class="gradient-box"><h2>Other interests</h2><hr>
@@ -623,8 +628,8 @@ animatedTags.forEach(tag => {
   const tagTop = tag.getBoundingClientRect().top
   
   if (tagTop < window.innerHeight) {
-    tag.style.animation = `fadein 600ms ${delay}ms both`
-    delay = delay + 50
+    tag.style.animation = `fadein 400ms ${delay}ms both`
+    delay = delay + 30
   } 
  }) 
 }
