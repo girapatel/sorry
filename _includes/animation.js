@@ -14,8 +14,8 @@ animatedTags.forEach(tag => {
   const tagTop = tag.getBoundingClientRect().top
   
   if (tagTop < window.innerHeight) {
-    tag.style.animation = `fadein 600ms ${delay}ms both`
-    delay = delay + 50
+    tag.style.animation = `fadein 400ms ${delay}ms both`
+    delay = delay + 30
   } 
  }) 
 }

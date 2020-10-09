@@ -3,13 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gira Patel | I'm a visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics.">
+    <meta name="description" content="Visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics.">
     <meta name="keywords" content="gira patel, gira, brand designer, graphic designer, digital designer, visual designer, digital designer new york, visual designer new york">
     <meta name="theme-color" content="var(--bg-color)"/>
     <title>Gira Patel | Portfolio</title>
     <meta property="og:url" content="http://localhost:4000" />
     <meta property="og:title" content="Gira Patel | Portfolio" />
     <meta property="og:image" content="http://girapatel.co/img/share-thumb.jpg" />
+    <meta property="twitter:image" content="http://girapatel.co/img/share-thumb.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:description" content="Visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics." />
+    <meta property="twitter:creator" content="@GiraNotJira" />
     <link href="../img/favicon.ico" rel="icon" type="image/bmp">
     
     <style>@font-face {
@@ -448,6 +452,7 @@ footer {
     text-align: center;
     align-items: center
     }
+  hr {margin: auto; width: 30%;}
   h2 {font-size: 1em;}
   p span {font-size: 1em;}
   h3 {font-size: .7em;}
@@ -509,11 +514,11 @@ footer {
 <section class="col-2-desc">
     <div>
         <h2>Overview</h2>
-        <p>These are projects I made for fun. You might notice I like to use my favorite TV shows as inspiration for motion studies.</p>
+        <p>These are projects I made for fun. I like to use my favorite TV shows as references for motion studies. I also have video and animation work on <a href="https://vimeo.com/girapatel" onclick="window.open(this.href); return false;">Vimeo</a>.</p>
     </div>
     <div>
     <h2>Tools Used</h2>
-    <p>Photoshop, Illustrator, Procreate, After Effects, Premiere</p>
+    <p>Photoshop, Illustrator, Procreate, After Effects</p>
     </div>
 </section>
 
@@ -602,8 +607,8 @@ animatedTags.forEach(tag => {
   const tagTop = tag.getBoundingClientRect().top
   
   if (tagTop < window.innerHeight) {
-    tag.style.animation = `fadein 600ms ${delay}ms both`
-    delay = delay + 50
+    tag.style.animation = `fadein 400ms ${delay}ms both`
+    delay = delay + 30
   } 
  }) 
 }
