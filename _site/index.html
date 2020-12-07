@@ -15,7 +15,6 @@
     <meta property="twitter:description" content="Visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics." />
     <meta property="twitter:creator" content="@GiraNotJira" />
     <link href="../img/favicon.ico" rel="icon" type="image/bmp">
-    
     <style>@font-face {
   font-family: 'Ubuntu Mono';
   src: 
@@ -479,16 +478,11 @@ footer {
   h1,.nav-logo {font-size: 2em;}
   h2,.nav-link-item,button {font-size: 1em;}  
 }</style>
-    
-    <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-128948376-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    <script>//random phrase intro
+var introPhrase = ['Design, am I right?', 'Fonts, am I right?', 'Digital, am I right?', 'Grids, am I right?']
+window.onload = function() {
+  document.getElementById('introPhrase').innerHTML = introPhrase[Math.floor(Math.random() * introPhrase.length)]
+}</script>
 </head>
 <body>
   <div class="content">
@@ -535,11 +529,11 @@ footer {
     
     <div class="card"><a href="travel-to-c"><img src="img/thumbnail_traveltoc.jpg" alt=""><h2>Travel To C</h2></a><h3>Identity, Web</h3></div>
     
-    <div class="card"><a href="asian-american-studies"><img src="img/thumbnail_aast.jpg" alt=""><h2>Asian American Studies</h2></a><h3>Illustration, Print</h3></div>
+    <div class="card"><a href="illustration"><img src="img/thumbnail_illustration.jpg" alt=""><h2>Illustration</h2></a><h3>Personal</h3></div>
     
     <div class="card"><a href="bitcamp" ><img src="img/thumbnail_bitcamp.jpg" alt=""><h2>Bitcamp</h2></a><h3>Hackathon Organizer, Illustration</h3></div>
     
-    <div class="card"><a href="misc" ><video autoplay loop muted playsinline src="img/thumbnail_misc.mp4" alt=""></video><h2>Miscellaneous</h2></a><h3>Personal, Motion, Illustration</h3></div>
+    <div class="card"><a href="motion" ><video autoplay loop muted playsinline src="img/thumbnail_motion.mp4" alt=""></video><h2>Motion</h2></a><h3>Personal</h3></div>
 </section> 
 
     <!--FOOTER-->  
@@ -553,46 +547,17 @@ footer {
 </footer>
 
     </div>
-  </body>
-    <script>//random phrase intro
-var introPhrase = ['Design, am I right?', 'Fonts, am I right?', 'Digital, am I right?', 'Grids, am I right?']
-window.onload = function() {
-  document.getElementById('introPhrase').innerHTML = introPhrase[Math.floor(Math.random() * introPhrase.length)]
-}</script>
-    <script>//dark mode toggle
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'light')
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark')
-  }
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false)
-
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem('theme', 'light') //add this
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem('theme', 'dark') //add this
-  }
-}
-
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null
-
-if (currentTheme) {
-  document.documentElement.setAttribute('data-theme', currentTheme)
-
-  if (currentTheme === 'light') {
-    toggleSwitch.checked = true
-  }
-}
+        <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-128948376-1', 'auto');
+  ga('send', 'pageview');
 </script>
-    <script>const animatedTags = document.querySelectorAll("h1 span, h1, p span, .card, div.item img, div.item video")
+<script>const animatedTags = document.querySelectorAll("h1 span, h1, p span, .card, div.item img, div.item video")
 
 //fade out on load
 animatedTags.forEach(tag => {
@@ -626,4 +591,38 @@ document.addEventListener("scroll", function() {
 window.addEventListener("resize",function() {
   fadeIn()
 })</script>
+<script>//dark mode toggle
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
+
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'light')
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark')
+  }
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false)
+
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem('theme', 'light') //add this
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem('theme', 'dark') //add this
+  }
+}
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null
+
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme)
+
+  if (currentTheme === 'light') {
+    toggleSwitch.checked = true
+  }
+}
+</script>
+  </body>
 </html>

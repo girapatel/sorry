@@ -15,7 +15,6 @@
     <meta property="twitter:description" content="Visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics." />
     <meta property="twitter:creator" content="@GiraNotJira" />
     <link href="../img/favicon.ico" rel="icon" type="image/bmp">
-    
     <style>@font-face {
   font-family: 'Ubuntu Mono';
   src: 
@@ -479,16 +478,11 @@ footer {
   h1,.nav-logo {font-size: 2em;}
   h2,.nav-link-item,button {font-size: 1em;}  
 }</style>
-    
-    <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-128948376-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    <script>//random phrase intro
+var introPhrase = ['Design, am I right?', 'Fonts, am I right?', 'Digital, am I right?', 'Grids, am I right?']
+window.onload = function() {
+  document.getElementById('introPhrase').innerHTML = introPhrase[Math.floor(Math.random() * introPhrase.length)]
+}</script>
 </head>
 <body>
   <div class="content">
@@ -514,7 +508,7 @@ footer {
 <section class="col-2-desc">
     <div>
         <h2>Overview</h2>
-        <p>Working on A Little Late was an exciting project because our team got to build the show's digital identity from the ground up. Without any key art or logo, I led design and art direction based on heavy research of Lilly’s fanbase and Lilly’s one request of wanting her show to convey disruption of late-night television. The chosen direction was inspired by the internet and television PSAs. I made the style guide and graphics below.</p>
+        <p>Working on A Little Late was an exciting project because our team got to build the show's digital identity from the ground up. Without any key art or logo, I led design and art direction based on research of Lilly’s fanbase and YouTube persona. The chosen direction was inspired by the internet and television PSAs to depict the distruption of Late Night television. I made the style guide and graphics below.</p>
     </div>
     <div>
     <h2>Tools Used</h2>
@@ -558,7 +552,15 @@ footer {
 </footer>
 
     </div>
-  </body>
+        <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-128948376-1', 'auto');
+      ga('send', 'pageview');
+    </script>
     <script>//dark mode toggle
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
 
@@ -638,4 +640,5 @@ function arrowChecker(e) {
         document.getElementById("next").click();
     }
 }</script>
+  </body>
 </html>

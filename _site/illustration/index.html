@@ -15,7 +15,6 @@
     <meta property="twitter:description" content="Visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics." />
     <meta property="twitter:creator" content="@GiraNotJira" />
     <link href="../img/favicon.ico" rel="icon" type="image/bmp">
-    
     <style>@font-face {
   font-family: 'Ubuntu Mono';
   src: 
@@ -479,16 +478,11 @@ footer {
   h1,.nav-logo {font-size: 2em;}
   h2,.nav-link-item,button {font-size: 1em;}  
 }</style>
-    
-    <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-128948376-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    <script>//random phrase intro
+var introPhrase = ['Design, am I right?', 'Fonts, am I right?', 'Digital, am I right?', 'Grids, am I right?']
+window.onload = function() {
+  document.getElementById('introPhrase').innerHTML = introPhrase[Math.floor(Math.random() * introPhrase.length)]
+}</script>
 </head>
 <body>
   <div class="content">
@@ -508,29 +502,31 @@ footer {
 </nav>
 
   <div class="container margin-top">
-    <h1 class="align-center">Asian American Studies</h1>
+    <h1 class="align-center">Illustration</h1>
   </div>
     <!--INTRO TEXT-->
 <section class="col-2-desc">
     <div>
         <h2>Overview</h2>
-        <p>Asian American Studies is a minor program at the University of Maryland, College Park. I worked with their department while studying in college and made a wide range of work for digital and print to promote the program, events, and courses.</p>
+        <p>These are a mix of personal illustrations, as well as work used for past jobs. My favorite workflow for this type of work is: sketching the ideas by hand, drawing in vector with an Apple Pencil on Illustrator, and then adding texture in Fresco.</p>
     </div>
     <div>
     <h2>Tools Used</h2>
-    <p>Photoshop, Illustrator, InDesign</p>
+    <p>Illustrator, Fresco, Apple Pencil</p>
     </div>
 </section>
 
       
 <!--MAIN GRID-->
-<main class="col-1">
+<main class="col-2">
+    <div class="item"><img src="../../img/agt-girl.jpg" alt="Illustration of a female ventriloquist"></div>
+    <div class="item"><img src="../../img/agt-dog.jpg" alt="Illustration of a dog doing a trick"></div>
+    <div class="item"><img src="../../img/agt-boy.jpg" alt="Illustration of a male magician"></div>
+    <div class="item"><img src="../../img/app-icons.jpg" alt="Grid of app icons"></div>
     <div class="item"><img src="../../img/aast-illo1.jpg" alt="Girl Illustration"></div>
     <div class="item"><img src="../../img/aast-illo2.jpg" alt="Web Illustrations"></div>
-    <div class="item"><img src="../../img/aast-illo3.jpg" alt="Shirt Design"></div>
-    <div class="item"><img src="../../img/aast-shirt.jpg" alt="Muslim Identity Illustration"></div>
-    <div class="item"><img src="../../img/aast-flyer1.jpg" alt="Flyer 1"></div>
-    <div class="item"><img src="../../img/aast-flyer2.jpg" alt="Flyer 2"></div>
+    <div class="item"><img src="../../img/work-together.jpg" alt="Illustration of two people working together"></div>
+    <div class="item"><img src="../../img/train-girl.jpg" alt="Illustration of a woman on a train"></div>
 </main>
 
 <section class="spacer">
@@ -552,7 +548,15 @@ footer {
 </footer>
 
     </div>
-  </body>
+        <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-128948376-1', 'auto');
+      ga('send', 'pageview');
+    </script>
     <script>//dark mode toggle
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
 
@@ -632,4 +636,5 @@ function arrowChecker(e) {
         document.getElementById("next").click();
     }
 }</script>
+  </body>
 </html>
