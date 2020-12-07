@@ -15,7 +15,6 @@
     <meta property="twitter:description" content="Visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics." />
     <meta property="twitter:creator" content="@GiraNotJira" />
     <link href="../img/favicon.ico" rel="icon" type="image/bmp">
-    
     <style>@font-face {
   font-family: 'Ubuntu Mono';
   src: 
@@ -479,16 +478,11 @@ footer {
   h1,.nav-logo {font-size: 2em;}
   h2,.nav-link-item,button {font-size: 1em;}  
 }</style>
-    
-    <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-128948376-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    <script>//random phrase intro
+var introPhrase = ['Design, am I right?', 'Fonts, am I right?', 'Digital, am I right?', 'Grids, am I right?']
+window.onload = function() {
+  document.getElementById('introPhrase').innerHTML = introPhrase[Math.floor(Math.random() * introPhrase.length)]
+}</script>
 </head>
 <body>
   <div class="content">
@@ -508,17 +502,17 @@ footer {
 </nav>
 
   <div class="container margin-top">
-    <h1 class="align-center">Miscellaneous</h1>
+    <h1 class="align-center">Motion</h1>
   </div>
     <!--INTRO TEXT-->
 <section class="col-2-desc">
     <div>
         <h2>Overview</h2>
-        <p>These are projects I made for fun. I like to use my favorite TV shows as references for motion studies. I also have video and animation work on <a href="https://vimeo.com/girapatel" onclick="window.open(this.href); return false;">Vimeo</a>.</p>
+        <p>These are projects I made for fun. I like to use my favorite TV shows as references for motion studies. There's more video and animation work on <a href="https://vimeo.com/girapatel" onclick="window.open(this.href); return false;">Vimeo</a>.</p>
     </div>
     <div>
     <h2>Tools Used</h2>
-    <p>Photoshop, Illustrator, Procreate, After Effects</p>
+    <p>Photoshop, Illustrator, Fresco, After Effects</p>
     </div>
 </section>
 
@@ -534,8 +528,7 @@ footer {
     <div class="item"><video autoplay loop muted playsinline src="../../img/misc-motion5.mp4" alt="Circle going through a maze"></video></div>
 </div>
 <div class="col-1">
-    <div class="item"><img src="../../img/misc-bitcamp.jpg" alt="Illustration of two people working together"></div>
-    <div class="item"><img src="../../img/misc-agt.jpg" alt="Illustration of a magician, dog, and ventriloquist"></div>
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/199392204?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 </div>
 </main>
 
@@ -557,7 +550,15 @@ footer {
 </footer>
 
     </div>
-  </body>
+        <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-128948376-1', 'auto');
+      ga('send', 'pageview');
+    </script>
     <script>//dark mode toggle
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
 
@@ -637,4 +638,5 @@ function arrowChecker(e) {
         document.getElementById("next").click();
     }
 }</script>
+  </body>
 </html>

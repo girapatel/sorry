@@ -15,7 +15,6 @@
     <meta property="twitter:description" content="Visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics." />
     <meta property="twitter:creator" content="@GiraNotJira" />
     <link href="../img/favicon.ico" rel="icon" type="image/bmp">
-    
     <style>@font-face {
   font-family: 'Ubuntu Mono';
   src: 
@@ -479,16 +478,11 @@ footer {
   h1,.nav-logo {font-size: 2em;}
   h2,.nav-link-item,button {font-size: 1em;}  
 }</style>
-    
-    <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-128948376-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    <script>//random phrase intro
+var introPhrase = ['Design, am I right?', 'Fonts, am I right?', 'Digital, am I right?', 'Grids, am I right?']
+window.onload = function() {
+  document.getElementById('introPhrase').innerHTML = introPhrase[Math.floor(Math.random() * introPhrase.length)]
+}</script>
 </head>
 <body>
   <div class="content">
@@ -547,8 +541,8 @@ footer {
 </main>
 
 <section class="spacer">
-    <a href="/asian-american-studies/" id="previous" class="left"><p>&larr; Previous</p></a>
-    <a href="/misc/" id="next" class="right"><p>Next &rarr;</p></a>
+    <a href="/illustration/" id="previous" class="left"><p>&larr; Previous</p></a>
+    <a href="/motion/" id="next" class="right"><p>Next &rarr;</p></a>
 </section>
 
     
@@ -565,7 +559,15 @@ footer {
 </footer>
 
     </div>
-  </body>
+        <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-128948376-1', 'auto');
+      ga('send', 'pageview');
+    </script>
     <script>//dark mode toggle
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
 
@@ -645,4 +647,5 @@ function arrowChecker(e) {
         document.getElementById("next").click();
     }
 }</script>
+  </body>
 </html>
