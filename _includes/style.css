@@ -98,8 +98,7 @@ img,video {
 a, a h2 {
   display: inline;
   color: var(--magenta);
-  text-decoration: none;
-  border-bottom: solid 1px transparent; 
+  text-decoration: none; 
 }
 a:visited {
   color: var(--magenta);
