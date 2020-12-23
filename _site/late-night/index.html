@@ -362,7 +362,7 @@ ul,li {
   100% {opacity:  1;}
 }
 
-h1 span, h1, p span, .card, div.item img, div.item video {
+h1 span, h1, p span, .card, div.item img, div.item video{
   opacity:  0;
 }
 
@@ -433,8 +433,10 @@ footer {
     a:hover, a h2:hover, a img:hover + h2, a video:hover + h2 {
         color: var(--blue);
         text-decoration: none;
-        border-bottom:  solid 1px var(--blue);
     }
+    a:hover{
+      border-bottom:  solid 1px var(--blue);
+  }
     .spacer a:hover {border-bottom: solid 1px transparent;}
 
     .nav-logo:hover {border-bottom: none;}
