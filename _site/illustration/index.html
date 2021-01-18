@@ -23,6 +23,7 @@
     url('/fonts/girasans-book.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -33,6 +34,7 @@
     url('/fonts/girasans-bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -264,7 +266,7 @@ dfn::before {
   display: -ms-grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: .5em;
+  gap: .5em;
 }
 
 .card-image {position: relative;transform: scale(1);}
@@ -327,33 +329,33 @@ ul,li {
 .col-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1.25em;
+  gap: 1.25em;
 }
 
 .col-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 4em;
+  gap: 1.25em;
   margin-top: 4em;
 }
 .col-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 4em;
+  gap: 1.25em;
   margin-top: 4em;
 }
 
 .col-1 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 3em;
+  gap: 1.25em;
   margin-top: 4em;
 }
 
 .col-2-desc {
   display: grid;
   grid-template-columns: repeat(1,3fr 1fr);
-  grid-gap: 8em;
+  gap: 8em;
   background: linear-gradient(to bottom, var(--gradient-color), var(--bg-color));
   padding: 0 2em;
 }
@@ -443,39 +445,41 @@ footer {
   }
 }
 @media screen and (max-width: 991px) {
-  .content {
-    margin: 2em 2em;
-  }
-  .col-1,.col-2,.col-3 {
-    margin-top: 2em;
-    grid-gap: 2em;
-  }
-  .col-4 {grid-template-columns: repeat(2, 1fr);}
-  .col-2-desc {grid-gap: 3em;}
+  .content {margin: 2em 2em;}
+  .col-1,.col-2,.col-3 {margin-top: 2em;}
+  .col-2-desc {gap: 3em;}
+  .card-logo {bottom: 20%;}
   .about-parent {flex-direction: column; align-items: center;}
   .sidebar {text-align: center;}
 }
 @media screen and (max-width: 767px) {
   .content {margin: 2em 1em;}
-  .col-3 {grid-template-columns: repeat(1, 1fr);}
+  .col-3,.col-4 {grid-template-columns: repeat(1, 1fr);}
+  main.col-4 {grid-template-columns: repeat(2, 1fr); gap: .5em;}
   .nav {justify-content: center;}
   .nav-logo {padding-right: .5em;}
   .nav-align {align-items: center;}
   .theme-switch, .slider {transform: scale(0.9);}
-  .margin-left {
-    margin: 1.6em;
-  }
+  .margin-left {margin: 1.6em;}
   .margin-tight {margin: 5em 0;}
   .margin-right {margin: 0 2em;}
   h1 span,h1,p span,a h2,li {text-align: center;display: block;}
   .about-parent {flex-direction: column;}
 }
 @media screen and (max-width: 553px) {
-  .col-2,.col-3,.col-4,.col-2-desc {grid-template-columns: repeat(1, 1fr);}
-  .col-2-desc {grid-gap: 1em;}
+  .col-2,.col-3,.col-2-desc {grid-template-columns: repeat(1, 1fr);}
+  .col-2-desc {gap: 1em;}
   h1 span {font-size: 1.15em; line-height: 1.5;}
   h1,.nav-logo {font-size: 2em;}
   h2,.nav-link-item,button {font-size: 1em;}  
+}
+
+@media screen and (max-width: 375px) {
+  .content {margin: 2em .5em;}
+  .nav-logo {padding-right: .3em;}
+  .margin-left, .margin-right {margin: 1em;}
+  main.col-4 {grid-template-columns: repeat(1, 1fr);} 
+  p.nav-align {text-align: center;}
 }</style>
     <script>//random phrase intro
 var introPhrase = ['Design, am I right?', 'Fonts, am I right?', 'Digital, am I right?', 'Grids, am I right?']
