@@ -35,16 +35,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Ubuntu Mono';
-  src: 
-    url('/fonts/ubuntumono-regular-webfont.woff2') format('woff2'),
-    url('/fonts/ubuntumono-regular-webfont.woff') format('woff'),
-    url('/fonts/ubuntumono-regular-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   --magenta: #E55EE8;  
   --blue: #586FF3;  
@@ -94,22 +84,14 @@ body {
   content: ' ';
   display: block;
 }
-.align-center {
-  text-align: center;
-}
-
+.align-center {text-align: center;}
 .left {float: left;}
 .right {float: right;}
 
-a,button,svg path,.nav-logo,.content,h2,html,body,.card img,.card video {
+a,button,svg path,.nav-logo,.content,h2,html,body,.card-image {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-}
-img,video {
-  max-width: 100%;
-  display: block;
-  
 }
 
 a, a h2 {
@@ -129,10 +111,10 @@ a:visited {
   line-height: 1.3;
 }
 .p span,p span,.h3,h3 {
-  font-family: 'Ubuntu Mono', Lucida Console, Monaco, monospace;
   font-weight: 500;
   color: var(--text-color);
-  text-transform: lowercase;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 h1 span {
   font-size: 1.4em;
@@ -145,15 +127,11 @@ h1 span {
   font-size: 1.25em;
 }
 .p span,p span {
-  font-size: 1.125em;
-  margin-top: -1em;
+  font-size: 0.75em;
 }
 .h3,h3 {
-  font-size: 0.875em;
-  margin: 0.3em 0;
+  font-size: 0.75em;
 }
-
-/*p, .p, h3, .h3 {margin-block-start: .75em; margin-block-end: .75em;}*/
 
 .nav {
   display: flex;
@@ -172,7 +150,6 @@ h1 span {
   line-height: 1;
   color: var(--magenta);
   text-transform: lowercase;
-  border-bottom: none;
 }
 
 .nav-link-item {
@@ -272,12 +249,8 @@ dfn::before {
   font-weight: 700;
   text-transform: lowercase;
 }
-.margin-med {
-  margin: 5em 0;
-}
-.margin-top {
-  margin: 4em 0 0;
-}
+.margin-med {margin: 5em 0;}
+.margin-top {margin: 4em 0 0;}
 .margin-tight {
     margin: 5em 12em;
     text-align: center;
@@ -285,12 +258,56 @@ dfn::before {
 .margin-right {margin-right: 2em;}
 .margin-left {margin-left: 2em;}
 
+.card {
+  position: relative;
+  display: -ms-grid;
+  display: -ms-grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: .5em;
+}
+
+.card-image {position: relative;transform: scale(1);}
+.card-image:hover {transform: scale(1.05);}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.card-title {
+  position: absolute;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 5%;
+  text-align: center;
+  color: #E55EE8;
+}
+
+a > h3 {color: var(--magenta);}
+a:hover > h3 {color: var(--blue);}
+
+.card-logo {
+  position: absolute;
+  height: 15%;
+  left: 50%;
+  bottom: 15%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+
+.item img,.item video {width: 100%; display: block;}
+
 .button-margin {margin: 1em 0 2.5em;}
 
 button {
   padding: .4em 1.4em;
   color: var(--magenta);
-  border: 4px solid var(--magenta);
+  border: 3px solid var(--magenta);
   background-color: transparent;
 }
 
@@ -300,16 +317,6 @@ hr {border: 0;
     background: var(--bg-color);
     background-image: linear-gradient(to right, var(--notjira-color), var(--notjira-color));
     margin: unset;
-}
-
-.main {
-  display: -ms-grid-columns;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-main img, main video, section img, section video {
-  display: block;
-  width: 100%;
 }
 
 ul,li {
@@ -352,7 +359,6 @@ ul,li {
 }
 
 .gradient-box {
-  /*background-color: var(--gradient-color);*/
   padding: 2em 2.5em;
   margin-bottom: 1em;
 }
@@ -360,18 +366,6 @@ ul,li {
 @keyframes fadein {
   0% {opacity: 0;}
   100% {opacity:  1;}
-}
-
-h1 span, h1, p span, .card, div.item img, div.item video{
-  opacity:  0;
-}
-
-.card h2 {
-  margin-bottom: .025em;
-}
-
-.card img, .card video {
-  margin: 1.5em 0;
 }
 
 .about-parent {
@@ -430,25 +424,17 @@ footer {
     dfn:hover::before {
         top: 20px;
     }
-    a:hover, a h2:hover, a img:hover + h2, a video:hover + h2 {
+    a:hover {
         color: var(--blue);
-        text-decoration: none;
     }
-    a:hover{
-      border-bottom:  solid 1px var(--blue);
-  }
-    .spacer a:hover {border-bottom: solid 1px transparent;}
 
-    .nav-logo:hover {border-bottom: none;}
     button:hover {
         text-decoration: none;
         background: var(--blue);
-        border: 4px solid var(--blue);
+        border: 3px solid var(--blue);
         color: #fff;
     }
-    .card img:hover,.card video:hover,h2 ~ .card img,h2 ~ .card video {
-        opacity: .5;
-    }
+    
 }
 
 @media screen and (min-width: 1600px) {
@@ -460,25 +446,18 @@ footer {
   .content {
     margin: 2em 2em;
   }
-  .home,.col-4,.col-2-desc {
-    grid-gap: 1em;
-  }
   .col-1,.col-2,.col-3 {
     margin-top: 2em;
     grid-gap: 2em;
   }
-  .about-parent {
-    flex-direction: column;
-
-    align-items: center
-    }
-  p span {font-size: 1em;}
-  h3 {font-size: .7em;}
+  .col-4 {grid-template-columns: repeat(2, 1fr);}
+  .col-2-desc {grid-gap: 3em;}
+  .about-parent {flex-direction: column; align-items: center;}
   .sidebar {text-align: center;}
 }
 @media screen and (max-width: 767px) {
-  .content {margin: 2em 1.2em;}
-  .home .col-3 {grid-template-columns: repeat(1, 1fr);}
+  .content {margin: 2em 1em;}
+  .col-3 {grid-template-columns: repeat(1, 1fr);}
   .nav {justify-content: center;}
   .nav-logo {padding-right: .5em;}
   .nav-align {align-items: center;}
@@ -488,12 +467,12 @@ footer {
   }
   .margin-tight {margin: 5em 0;}
   .margin-right {margin: 0 2em;}
-  h1 span,h1,p span,h3,a h2,li {text-align: center;display: block;}
-  a:hover, a h2:hover, a img:hover + h2, a video:hover + h2 {border-bottom: transparent}
+  h1 span,h1,p span,a h2,li {text-align: center;display: block;}
   .about-parent {flex-direction: column;}
 }
 @media screen and (max-width: 553px) {
   .col-2,.col-3,.col-4,.col-2-desc {grid-template-columns: repeat(1, 1fr);}
+  .col-2-desc {grid-gap: 1em;}
   h1 span {font-size: 1.15em; line-height: 1.5;}
   h1,.nav-logo {font-size: 2em;}
   h2,.nav-link-item,button {font-size: 1em;}  
@@ -536,7 +515,7 @@ window.onload = function() {
         <h2 style="display:inline;">&bull; [ geer-ah ] &bull; she/her</h2>
         <p>A visual designer that always names her layers, hates buzzwords, and doesn't take herself too seriously. She primarily focuses on brand and identity work, but also loves experimenting with motion, 3D, illustration, and video editing. </p>
         <p>Alright, I can't continue talking in third person. I'm just a human who's trying their best. I love storytelling, learning, and sharing.</p><hr>
-        <p>Notable clients: Saturday Night Live, Late Night with Seth Meyers, A Little Late with Lilly Singh, The Tonight Show Starring Jimmy Fallon, Small Ball with Sherrod Small, Merry Bright Music, Sethmaker Shoemeyers Productions</p>
+        <p>Notable clients: Saturday Night Live, Late Night with Seth Meyers, A Little Late with Lilly Singh, The Tonight Show Starring Jimmy Fallon, Sethmaker Shoemeyers Productions</p>
     </div>
         <div class="gradient-box"><h2>Other Interests</h2>
         <p>Video games, live music, birds, synth pop, sci-fi, and front-end development. Big fan of scouring Reddit threads after watching a good show or movie 🤓 Unfortunately, very active on <a href="https://twitter.com/GiraNotJira" onclick="window.open(this.href); return false;">the bird app</a>, mostly to talk about birds.</p></div>
@@ -576,7 +555,7 @@ window.onload = function() {
     <a href="https://vimeo.com/girapatel" class="margin-right" onclick="window.open(this.href); return false;">Vimeo</a>
     <a href="https://dribbble.com/girapatel" class="margin-right" onclick="window.open(this.href); return false;">Dribbble</a>
     </div>
-    <p class="nav-align">Made with my 🐻 hands &copy; Gira Patel 2020 </p>
+    <p class="nav-align">Made with my 🐻 hands &copy; Gira Patel 2021 </p>
 </footer>
 
     </div>
