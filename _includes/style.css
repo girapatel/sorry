@@ -445,7 +445,7 @@ footer {
   .theme-switch, .slider {transform: scale(0.9);}
   .margin-left {margin: 1.6em;}
   .margin-tight {margin: 5em 0;}
-  .margin-right {margin: 0 2em;}
+  .margin-right {margin: 0 1em;}
   h1 span,h1,p span,a h2,li {text-align: center;display: block;}
   .about-parent {flex-direction: column;}
 }
