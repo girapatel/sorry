@@ -10,6 +10,7 @@ permalink: /:title/
 exclude:
   - README.md
   - .sass-cache
+  - .jekyll-cache
   - Gemfile
   - Gemfile.lock
     
