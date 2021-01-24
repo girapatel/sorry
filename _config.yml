@@ -1,6 +1,6 @@
 title: Gira Patel
 email: gira.patel94@gmail.com
-description: Visual designer that's passionate about digital, branding, and the entertainment industry. Other interests include tech, playlist-making, and motion graphics.
+description: I'm a visual designer that's passionate about art direction, brand identity, and the entertainment industry. Other interests include 3D, motion graphics, music, gaming, and tech.
 url: http://girapatel.co/
 
 baseurl: ""
@@ -18,3 +18,4 @@ exclude:
 #theme: minima
 #plugins:
  # - jekyll-feed
+ # - jekyll-sitemap
