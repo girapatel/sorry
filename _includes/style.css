@@ -230,6 +230,7 @@ dfn::before {
 }
 
 .nav-link-item, button {
+  font-family: Gira Sans, Helvetica Neue, Roboto, Arial, sans-serif;
   font-size: 1.25em;
   font-weight: 700;
   text-transform: lowercase;
