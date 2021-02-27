@@ -262,6 +262,7 @@ dfn::before {
   height: auto;
   -o-object-fit: fill;
   object-fit: fill;
+  border-radius: 3px;
 }
 
 .card-title {
@@ -279,14 +280,14 @@ a:hover > h3 {color: var(--blue);}
 
 .card-logo {
   position: absolute;
-  height: 15%;
+  height: 12%;
   left: 50%;
   bottom: 15%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%)
 }
 
-.item img,.item video {width: 100%; display: block;}
+.item img,.item video {width: 100%; display: block; border-radius: 3px;}
 
 .button-margin {margin: 1em 0 2.5em;}
 
@@ -295,6 +296,7 @@ button {
   color: var(--magenta);
   border: 3px solid var(--magenta);
   background-color: transparent;
+  border-radius: 3px;
 }
 
 hr {border: 0;
@@ -342,11 +344,13 @@ ul,li {
   gap: 8em;
   background: linear-gradient(to bottom, var(--gradient-color), var(--bg-color));
   padding: 0 2em;
+  border-radius: 3px;
 }
 
 .gradient-box {
   padding: 2em 2.5em;
   margin-bottom: 1em;
+  border-radius: 3px;
 }
 
 @keyframes fadein {
