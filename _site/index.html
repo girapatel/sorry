@@ -486,11 +486,6 @@ footer {
   main.col-4 {grid-template-columns: repeat(1, 1fr);} 
   p.nav-align {text-align: center;}
 }</style>
-    <script>//random phrase intro
-var introPhrase = ['Design, am I right?', 'Fonts, am I right?', 'Digital, am I right?', 'Grids, am I right?']
-window.onload = function() {
-  document.getElementById('introPhrase').innerHTML = introPhrase[Math.floor(Math.random() * introPhrase.length)]
-}</script>
 </head>
 <body>
   <div class="content">
@@ -539,13 +534,13 @@ window.onload = function() {
         <h3 class="card-title">Season 44-46 Social</h3></a>
     </div>
 
-    <div class="card-image"><a href="/motion/">
-        <video autoplay loop muted playsinline src="../../img/card_motion.mp4" class="image" alt=""></video>
-        <h3 class="card-title">Motion</h3></a>
-    </div>
     <div class="card-image"><a href="/illustration/">
         <img src="../../img/card_illustration.jpg" class="image" loading="lazy" alt=""/>
         <h3 class="card-title">Illustration</h3></a>
+    </div>
+    <div class="card-image"><a href="/motion/">
+        <video autoplay loop muted playsinline src="../../img/card_motion.mp4" class="image" alt=""></video>
+        <h3 class="card-title">Motion</h3></a>
     </div>
     <div class="card-image"><a href="/a-little-late/">
         <img src="../../img/card_lilly1.jpg" class="image" loading="lazy" alt=""/>
@@ -580,6 +575,11 @@ window.onload = function() {
   ga('create', 'UA-128948376-2', 'auto');
   ga('send', 'pageview');
 </script>
+<script>//random phrase intro
+var introPhrase = ['Design, am I right?', 'Fonts, am I right?', 'Digital, am I right?', 'Grids, am I right?']
+window.onload = function() {
+  document.getElementById('introPhrase').innerHTML = introPhrase[Math.floor(Math.random() * introPhrase.length)]
+}</script>
 <script>const animatedTags = document.querySelectorAll("h1 span, h1, p span, .card, div.item img, div.item video")
 
 //fade out on load
